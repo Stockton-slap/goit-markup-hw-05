@@ -1,0 +1,346 @@
+/* --------- CSS for Studio --------- */
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 200px 0;
+  margin: 0 auto;
+  width: 100%;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background.jpg);
+  background-color: #2f303a;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero > .hero-title {
+  color: var(--hero-text-color);
+
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.37;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero > .button {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  background-color: var(--accent-color);
+  color: var(--hero-text-color);
+  cursor: pointer;
+  font-family: inherit;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9px;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* OUR FEATURES */
+
+.section-title {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 50px;
+  padding-top: 94px;
+}
+
+.section-title.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.features {
+  display: flex;
+  padding-top: 94px;
+}
+
+.features p {
+  margin-bottom: 30px;
+}
+
+.features .text {
+  font-size: 14px;
+  line-height: 1.71;
+  margin: 0;
+}
+
+.features .title-one {
+  color: var(--secondary-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.space-one:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-icon {
+  background-color: #f5f4fa;
+  display: block;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+}
+
+/* WHAT WE DO */
+
+.pics {
+  display: flex;
+  padding-bottom: 94px;
+}
+
+/* OUR TEAM */
+
+.team {
+  display: flex;
+}
+
+.team p {
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.team .title-two {
+  color: var(--secondary-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  padding: 30px 0 10px;
+  margin: 0;
+}
+
+.team .work-pic {
+  display: block;
+}
+
+.team > .space-two {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  margin-right: 30px;
+  text-align: center;
+  background-color: var(--hero-text-color);
+}
+.section.team {
+  background-color: #f5f4fa;
+  padding-bottom: 94px;
+}
+
+.links {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.icon-list {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  background-color: var(--hero-text-color);
+}
+
+.icon-list:nth-child(4) {
+  margin-right: 0;
+}
+
+.icon-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  fill: var(--icon-color);
+}
+
+.icon-list:hover,
+.icon-list:focus {
+  background-color: var(--accent-color);
+}
+
+.icon-list:hover .icon,
+.icon-list:focus .icon {
+  fill: var(--hero-text-color);
+}
+
+/* CLIENTS */
+
+.clients {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 94px;
+}
+
+.client-list {
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  margin-right: 30px;
+  background-color: var(--hero-text-color);
+  width: 170px;
+  height: 92px;
+}
+
+.client-list:hover,
+.client-list:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.client-list:nth-child(6) {
+  margin-right: 0;
+}
+
+.client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-list:hover .client-icon,
+.client-list:focus .client-icon {
+  fill: var(--accent-color);
+}
+
+.client-icon {
+  fill: var(--icon-color);
+}
+
+/* --------- CSS for Portfolio --------- */
+.project-title.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 94px 0 50px;
+}
+.filter > .buttons {
+  background-color: var(--filter-color);
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: none;
+  margin-right: 8px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.filter > .buttons:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter > .buttons:hover,
+.filter > .buttons:focus,
+.filter > .accent {
+  background-color: var(--accent-color);
+  color: var(--hero-text-color);
+}
+.filter > .accent {
+  border-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 94px;
+  width: inherit;
+}
+
+.works .work-title {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  padding: 20px 24px 4px;
+  margin: 0;
+}
+
+.works .desc {
+  font-size: 16px;
+  line-height: 1.87;
+
+  padding: 0 24px 20px;
+  margin: 0;
+}
+
+.work-list {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  width: 370px;
+  height: 404px;
+}
+
+.work-list:hover,
+.work-list:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.work-link {
+  cursor: pointer;
+}
+
+.work-pic {
+  display: block;
+  width: 100%;
+}
