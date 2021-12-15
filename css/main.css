@@ -378,7 +378,6 @@
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
-  box-sizing: border-box;
   width: 370px;
   height: 404px;
 
@@ -392,8 +391,61 @@
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.work-list:hover .work-pic-wrap::before,
+.work-list:focus .work-pic-wrap::before {
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(0);
+}
+
+.work-list:hover .work-text,
+.work-list:focus .work-text {
+  opacity: 1;
+}
+
 .work-link {
   cursor: pointer;
+}
+
+.work-pic-wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.work-pic-wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  opacity: 0;
+}
+
+.work-text p {
+  margin: 0;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--hero-text-color);
 }
 
 .work-pic {
