@@ -101,7 +101,7 @@
   text-transform: uppercase;
 }
 
-.space-one:not(:last-child) {
+.features-space:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -117,6 +117,40 @@
 .pics {
   display: flex;
   padding-bottom: 94px;
+}
+
+.pics-space:not(:last-child) {
+  margin-right: 30px;
+}
+
+.pics-space {
+  position: relative;
+  display: flex;
+}
+
+.pics-caption p {
+  margin: 0;
+  padding: 0;
+}
+
+.pics-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 370px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--hero-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* OUR TEAM */
@@ -174,6 +208,10 @@
   margin-right: 10px;
   justify-content: center;
   background-color: var(--hero-text-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list:nth-child(4) {
@@ -190,6 +228,10 @@
 
 .icon {
   fill: var(--icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list:hover,
@@ -217,6 +259,10 @@
   background-color: var(--hero-text-color);
   width: 170px;
   height: 92px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list:hover,
@@ -243,6 +289,10 @@
 
 .client-icon {
   fill: var(--icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------- CSS for Portfolio --------- */
@@ -264,7 +314,7 @@
   justify-content: center;
   margin: 94px 0 50px;
 }
-.filter > .buttons {
+.buttons {
   background-color: var(--filter-color);
   color: var(--secondary-text-color);
   cursor: pointer;
@@ -277,21 +327,23 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+
+  transition-property: box-shadow, background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter > .buttons:hover {
+.buttons:hover,
+.buttons:focus {
+  background-color: var(--accent-color);
+  color: var(--hero-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter > .buttons:hover,
-.filter > .buttons:focus,
-.filter > .accent {
+.accent {
   background-color: var(--accent-color);
   color: var(--hero-text-color);
-}
-.filter > .accent {
-  border-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -329,6 +381,10 @@
   box-sizing: border-box;
   width: 370px;
   height: 404px;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-list:hover,
