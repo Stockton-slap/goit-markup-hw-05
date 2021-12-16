@@ -62,15 +62,16 @@
   z-index: 1;
 
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms linear;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
 
-.backdrop.backdrop.is-hidden .modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
@@ -95,12 +96,10 @@
   top: 8px;
   right: 8px;
 
+  display: flex;
   padding: 9px;
   margin-right: 8px;
   margin-top: 8px;
-
-  display: flex;
-  align-items: center;
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
