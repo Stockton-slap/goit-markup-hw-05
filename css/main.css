@@ -60,19 +60,21 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-
+  visibility: visible;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-duration) linear,
+    visibility var(--transition-duration) linear;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
@@ -82,7 +84,7 @@
   width: 528px;
   height: 581px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms linear;
+  transition: transform var(--transition-duration) linear;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -95,14 +97,18 @@
   position: absolute;
   top: 8px;
   right: 8px;
+  width: 30px;
+  height: 30px;
 
   display: flex;
-  padding: 9px;
-  margin-right: 8px;
-  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
   background-color: var(--hero-text-color);
 
   cursor: pointer;
@@ -266,7 +272,8 @@
   justify-content: center;
   background-color: var(--hero-text-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .icon-list:nth-child(4) {
@@ -284,7 +291,7 @@
 .icon {
   fill: var(--icon-color);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .icon-list:hover,
@@ -313,7 +320,8 @@
   width: 170px;
   height: 92px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .client-list:hover,
@@ -341,7 +349,7 @@
 .client-icon {
   fill: var(--icon-color);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 /* --------- CSS for Portfolio --------- */
@@ -377,9 +385,11 @@
   font-size: 16px;
   line-height: 1.6;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-duration)
+      var(--transition-timing-function),
+    background-color var(--transition-duration)
+      var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function);
 }
 
 .buttons:hover,
@@ -430,7 +440,8 @@
   width: 370px;
   height: 404px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .work-list:hover,
@@ -472,7 +483,8 @@
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .work-pic {
@@ -488,7 +500,8 @@
   left: 0;
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
 
   font-weight: 400;
   font-size: 18px;

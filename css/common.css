@@ -77,7 +77,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
 
-  transition: color 250ms var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .site-nav .link:hover,
@@ -127,7 +127,7 @@ body {
 }
 
 .contact {
-  transition: color 250ms var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contact:hover,
@@ -144,7 +144,7 @@ body {
   fill: var(--primary-text-color);
   margin-right: 10px;
 
-  transition: fill 250ms var(--transition-timing-function);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 /* FOOTER */
@@ -170,7 +170,7 @@ body {
 .contacts {
   text-decoration: none;
 
-  transition: color 250ms var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contacts:hover,
@@ -249,7 +249,8 @@ body {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms var(--transition-timing-function);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .footer-link {
