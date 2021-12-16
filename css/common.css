@@ -5,6 +5,8 @@
   --hero-text-color: #ffffff;
   --filter-color: #f5f4fa;
   --icon-color: #afb1b8;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
 }
 
 body {
@@ -75,9 +77,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .site-nav .link:hover,
@@ -127,9 +127,7 @@ body {
 }
 
 .contact {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .contact:hover,
@@ -146,9 +144,7 @@ body {
   fill: var(--primary-text-color);
   margin-right: 10px;
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--transition-timing-function);
 }
 
 /* FOOTER */
@@ -174,9 +170,7 @@ body {
 .contacts {
   text-decoration: none;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .contacts:hover,
@@ -255,9 +249,7 @@ body {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transition-timing-function);
 }
 
 .footer-link {

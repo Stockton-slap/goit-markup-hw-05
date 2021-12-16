@@ -266,9 +266,7 @@
   justify-content: center;
   background-color: var(--hero-text-color);
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list:nth-child(4) {
@@ -286,9 +284,7 @@
 .icon {
   fill: var(--icon-color);
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list:hover,
@@ -317,9 +313,7 @@
   width: 170px;
   height: 92px;
 
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list:hover,
@@ -347,9 +341,7 @@
 .client-icon {
   fill: var(--icon-color);
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------- CSS for Portfolio --------- */
@@ -385,9 +377,9 @@
   font-size: 16px;
   line-height: 1.6;
 
-  transition-property: box-shadow, background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:hover,
@@ -438,9 +430,7 @@
   width: 370px;
   height: 404px;
 
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-list:hover,
@@ -456,9 +446,9 @@
   transform: translateY(0);
 }
 
-.work-list:hover .work-text,
-.work-list:focus .work-text {
-  opacity: 1;
+.work-list:hover .work-paragraph,
+.work-list:focus .work-paragraph {
+  transform: translateY(0);
 }
 
 .work-link {
@@ -485,30 +475,24 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-text {
-  position: absolute;
-  top: 0;
-  left: 0;
+.work-pic {
+  display: block;
   width: 100%;
-
-  opacity: 0;
 }
 
-.work-text p {
+.work-paragraph {
   margin: 0;
   padding: 63px 24px;
   position: absolute;
   top: 0;
   left: 0;
 
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
 
   color: var(--hero-text-color);
-}
-
-.work-pic {
-  display: block;
-  width: 100%;
 }
